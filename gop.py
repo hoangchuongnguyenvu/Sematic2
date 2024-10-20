@@ -11,10 +11,12 @@ import pandas as pd
 import uuid
 from tqdm import tqdm
 
-# Khởi tạo Firebase (chỉ thực hiện một lần)
+firebase_credentials = json.loads(st.secrets["firebase_credentials"])
+
+   # Khởi tạo Firebase với chứng chỉ từ secrets
 if not firebase_admin._apps:
-    cred = credentials.Certificate("hchuong-firebase-adminsdk-1m82k-829fb1690b.json")
-    firebase_admin.initialize_app(cred, {'storageBucket': 'hchuong.appspot.com'})
+    cred = credentials.Certificate(firebase_credentials)
+    initialize_app(cred, {'storageBucket': 'hchuong.appspot.com'})
 
 # Kết nối đến Firestore và Storage
 db = firestore.client()
