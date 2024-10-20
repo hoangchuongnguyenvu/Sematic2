@@ -1,8 +1,8 @@
-streamlit==1.24.0
-opencv-python-headless==4.7.0.72
-numpy==1.23.5
-firebase-admin==6.1.0
-Pillow==9.5.0
-requests==2.31.0
-pandas==2.0.3
-tqdm==4.65.0
+streamlit
+opencv-python-headless
+numpy
+firebase-admin
+Pillow
+requests
+pandas
+tqdm
